@@ -1,5 +1,5 @@
 # Analysis Codes
-Data analysis codes for Integrated Multi-Omics Analysis Identifies Disrupted Branched-Chain Amino Acid Catabolism as Causal for Sarcopenia
+Custom data analysis codes for Integrated Multi-Omics Analysis Identifies Disrupted Branched-Chain Amino Acid Catabolism as Causal for Sarcopenia
 
 **<font size='5'> 1. mRNA and Metabolite Codes.R. </font>** This file contains codes for differential expression analysis of mRNA data and metabolomics data.
 
@@ -9,11 +9,11 @@ Data analysis codes for Integrated Multi-Omics Analysis Identifies Disrupted Bra
 This tool is developed with R, so if you want to run it locally, you may do some preparatory work: 
 **3.1. Install R.** You can download R from here: [https://www.r-project.org/](https://www.r-project.org/).  
 **3.2. Install RStudio.** (Recommendatory but not necessary). You can download RStudio from here: [https://www.rstudio.com/](https://www.rstudio.com/).  
-**3.3. Check packages.** After installing R and RStudio, you should check whether you have installed these packages (devtools, shiny, shinyjs, shinyBS, shinyWidgets, readxl, gdata, ggplot2, ggsci, DT, data.table, uwot, pheatmap, RColorBrewer, tidyverse, ggExtra, cowplot, writexl, impute, Amelia, qgraph, MEGENA, MetaNet, clusterProfiler, ReporterScore). You may run the codes below to check them:  
+**3.3. Check packages.** After installing R and RStudio, you should check whether you have installed these packages (devtools, openxlsx, limma, qvalue, DESeq2, ggplot2, patchwork, pheatmap, impute, samr). You may run the codes below to check them:  
 
 ```r
 if(!require(pacman)) install.packages("pacman")
-pacman::p_load(devtools, shiny, shinyjs, shinyBS, shinyWidgets, readxl, gdata, ggplot2, ggsci, DT, data.table, uwot, pheatmap, RColorBrewer, tidyverse, ggExtra, cowplot, writexl, impute, Amelia, qgraph, MEGENA, MetaNet, clusterProfiler, ReporterScore)
+pacman::p_load(devtools, openxlsx, limma, qvalue, DESeq2, ggplot2, patchwork, pheatmap, impute, samr)
 ```
 
 #### 4. All software dependencies and operating systems (including version numbers)

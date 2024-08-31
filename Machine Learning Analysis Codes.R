@@ -26,20 +26,16 @@ rf_model <- train(
 )
 # Output the results
 print(rf_model)
-# 安装并加载pROC包
-install.packages("pROC")
+#Load necessary library
 library(pROC)
-# 假设你有一个实际的响应向量和一个预测得分或概率向量
-# response 是真实的分类结果，predictions 是模型预测的概率
-# 模型预测概率示例
-response <- c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,1,1,0,1,0,0,0,0,1,1,1,0,1,0,0,1,1,0,1,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0) # 真实分类结果示例
+#Assuming you have an actual response vector and a prediction score or probability vector response that are real classification outcomes, predictions are probability examples of model predictions.
+response <- c(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,1,1,1,0,1,0,0,0,0,1,1,1,0,1,0,0,1,1,0,1,1,0,1,0,0,0,0,1,1,1,0,1,0,0,0,0,0,0,0)
 predictions <- c(0.7,0.4,0.9,0.3,0.1,0.4,0.3,0.3,0.2,0.4,0.3,0.1,0.2,0.4,0,0.3,0.2,0.2,0.8,0.7,0,0.6,0,0.7,0.4,0.4,0,0.2,0.4,0,0.7,0.4,0.7,0.2,0.8,0.1,0.6,0.8,0.3,0.4,0.7,0.9,0.2,0.8,0.2,0.4,0.2,0.1,0.8,0.7,0.9,0.4,0.8,0.1,0,0.4,0.1,0.2,0.1,0.2)
-# 创建ROC曲线对象
+#Create ROC curve objects
 roc_obj <- roc(response, predictions)
-# 计算AUC
+#Calculate AUC
 auc_value <- auc(roc_obj)
-# 打印AUC值
+#Print AUC value
 print(auc_value)
-# 绘制ROC曲线
+#Plot ROC curve
 plot(roc_obj, main="ROC Curve", col="#1c61b6")
-

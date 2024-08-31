@@ -5,7 +5,18 @@ Data analysis codes for Integrated Multi-Omics Analysis Identifies Disrupted Bra
 
 **<font size='5'> 2. Machine Learning Analysis Codes.R. </font>** This file contains codes for random forest analysis.
 
-#### All software dependencies and operating systems (including version numbers)
+#### 3. Preparation for local installation of R and packages
+This tool is developed with R, so if you want to run it locally, you may do some preparatory work: 
+**3.1. Install R.** You can download R from here: [https://www.r-project.org/](https://www.r-project.org/).  
+**3.2. Install RStudio.** (Recommendatory but not necessary). You can download RStudio from here: [https://www.rstudio.com/](https://www.rstudio.com/).  
+**3.3. Check packages.** After installing R and RStudio, you should check whether you have installed these packages (devtools, shiny, shinyjs, shinyBS, shinyWidgets, readxl, gdata, ggplot2, ggsci, DT, data.table, uwot, pheatmap, RColorBrewer, tidyverse, ggExtra, cowplot, writexl, impute, Amelia, qgraph, MEGENA, MetaNet, clusterProfiler, ReporterScore). You may run the codes below to check them:  
+
+```r
+if(!require(pacman)) install.packages("pacman")
+pacman::p_load(devtools, shiny, shinyjs, shinyBS, shinyWidgets, readxl, gdata, ggplot2, ggsci, DT, data.table, uwot, pheatmap, RColorBrewer, tidyverse, ggExtra, cowplot, writexl, impute, Amelia, qgraph, MEGENA, MetaNet, clusterProfiler, ReporterScore)
+```
+
+#### 4. All software dependencies and operating systems (including version numbers)
 ```r
 sessionInfo()
 R version 4.4.1 (2024-06-14 ucrt)
